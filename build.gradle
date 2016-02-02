@@ -3,8 +3,10 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'war'
+apply plugin: 'jetty'
 
-sourceCompatibility = 1.5
+
+sourceCompatibility = 1.6
 
 repositories {
     mavenCentral()
@@ -23,6 +25,7 @@ dependencies {
 //    compile 'org.apache.cxf:cxf-rt-frontend-jaxws:3.1.4'
 //    compile 'org.apache.cxf:cxf-rt-transports-http:3.1.4'
     compile fileTree(dir: 'C:\\devtools\\apache-cxf-3.1.4\\lib', include: '*.jar')
+    compile ('org.codehaus.jackson:jackson-jaxrs:1.9.0')
 
 //    compile 'org.springframework:spring-web'
 //    compile 'org.apache.cxf:cxf-rt-frontend-jaxws:3.1.4'

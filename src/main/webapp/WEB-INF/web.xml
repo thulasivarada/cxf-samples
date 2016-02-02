@@ -4,14 +4,26 @@
         http://java.sun.com/xml/ns/javaee
         http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
     <display-name>cxf</display-name>
-    <!--<listener>-->
-    <!--<listener-class>-->
-    <!--org.springframework.web.context.ContextLoaderListener-->
-    <!--</listener-class>-->
-    <!--</listener>-->
     <listener>
-        <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+    <listener-class>
+    org.springframework.web.context.ContextLoaderListener
+    </listener-class>
     </listener>
+
+    <context-param>
+                <param-name>contextConfigLocation</param-name>
+                <param-value>WEB-INF/beans.xml</param-value>
+            </context-param>
+
+    <!-- which one to use what is the difference between ContextLoaderListener and RequestContextListener???? -->
+   <!-- <listener>
+                <listener-class>
+                    org.springframework.web.context.ContextLoaderListener
+                </listener-class>
+            </listener>-->
+  <!--  <listener>
+        <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+    </listener>-->
     <servlet>
         <description>Apache CXF Endpoint</description>
         <display-name>cxf</display-name>
